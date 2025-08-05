@@ -9,6 +9,7 @@ import CustomAppBar from './components/AppBar';
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Login />} />
       <Route path="/login" element={<Login />} />
 
       <Route element={<PrivateRoute />}>
