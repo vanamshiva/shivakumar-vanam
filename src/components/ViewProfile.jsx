@@ -26,7 +26,6 @@ const useStyles = makeStyles(() => ({
         boxShadow: '0 12px 32px rgba(0, 0, 0, 0.1)',
     },
     skillsContainer: {
-        background: 'white',
         padding: '20px',
         borderRadius: '16px',
         boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',

@@ -27,7 +27,6 @@ const useStyles = makeStyles(() => ({
     width: '100vw',
     boxSizing: 'border-box',
     overflow: 'auto',
-    background: '#ffffff',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
