@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     paddingLeft: '16px',
     paddingRight: '16px',
-    background: '#ffffff'
+    backgroundColor: '#ffffff !important'
   },
   content: {
     padding: '32px',
@@ -30,7 +30,8 @@ const useStyles = makeStyles(() => ({
     background: '#ffffff',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    background: 'linear-gradient(to bottom, #c7d2fe, #7dd3fc, #f0abfc) !important'
   },
   button: {
     color: '#2891e6 !important',
