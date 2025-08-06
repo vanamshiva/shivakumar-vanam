@@ -28,8 +28,9 @@ export const ProfileData = {
 
     Projects: [
         {
-            title: 'Digital Asset Management (DAM)',
-            about: 'A scalable system for storing, organizing, and retrieving digital assets with intuitive UI and efficient backend handling.',
+            title: 'Digital Asset Management System (DAM)',
+            about: 'Robust system to streamline digital asset storage, organization, retrieval, and accessibility with seamless UI and backend integration.',
+            description: 'Built an enterprise-grade system to manage digital assets effectively. Integrated scalable backend architecture with intuitive UI. Enabled advanced search and filters for faster retrieval.',
             logo: './src/assets/svg-images/dam.svg',
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
@@ -37,18 +38,19 @@ export const ProfileData = {
                 { name: "MongoDB", logo: svgLogos.mongodb, styleKey: 'mongoDb' },
             ],
             responsibilities: [
-                'Designed and developed a user-friendly UI/UX',
-                'Integrated advanced search and filter features',
-                'Optimized backend to manage large asset volumes',
-                'Enabled seamless frontend-backend communication'
+                'Designed and developed an intuitive and user-friendly UI/UX',
+                'Implemented advanced search and filtering for efficient asset access',
+                'Architected scalable backend services to handle large volumes of assets',
+                'Ensured seamless integration between frontend and backend components'
             ],
             role: 'Full Stack Developer',
             duration: 'Nov 2024 - Present',
             company: 'Mango Mass Media Pvt Ltd',
         },
         {
-            title: 'Reports & Data Export',
-            about: 'Module for generating XLSX and CSV reports to streamline business reporting processes.',
+            title: 'Reports & Data Export Module',
+            about: 'An end-to-end reporting module that supports XLSX/CSV export, custom UI, and backend data computation over multiple collections for analytics.',
+            description: 'Designed intuitive report UI and backend computation logic. Automated XLSX/CSV export based on dynamic filters. Improved reporting efficiency and cross-team analytics.',
             logo: './src/assets/svg-images/reports.svg',
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
@@ -56,16 +58,19 @@ export const ProfileData = {
                 { name: "xlsx", logo: svgLogos.mongodb, styleKey: 'xlsx' },
             ],
             responsibilities: [
-                'Built dynamic XLSX and CSV export functionality',
-                'Improved operational efficiency through automated reports',
+                'Developed interactive React-based UI for report selection and filters',
+                'Built backend reporting engine to compute data across multiple collections',
+                'Integrated XLSX and CSV export capabilities',
+                'Improved operational efficiency by automating report generation workflows'
             ],
-            role: 'Backend Developer',
+            role: 'Full Stack Developer',
             duration: 'Nov 2024 - Present',
             company: 'Mango Mass Media Pvt Ltd',
         },
         {
-            title: 'Sentinel',
-            about: 'Customs clearance management system with enhanced usability and seamless interface.',
+            title: 'Sentinel – Customs Management System',
+            about: 'A newly built logistics management system for handling customs clearance with improved UI/UX and 50% faster performance compared to the earlier version.',
+            description: 'Rebuilt the entire application from scratch with a modern UI. Integrated real-time APIs and optimized workflows. Achieved 50% faster performance over the previous version.',
             logo: './src/assets/svg-images/sentinel.svg',
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
@@ -73,17 +78,20 @@ export const ProfileData = {
                 { name: "Hapi", logo: svgLogos.mongodb, styleKey: 'mongoDb' },
             ],
             responsibilities: [
-                'Developed intuitive and responsive UI components',
-                'Integrated RESTful APIs with robust backend logic',
-                'Boosted client satisfaction through usability improvements'
+                'Designed and implemented a new version of the system from scratch',
+                'Developed user-friendly, responsive UI components using React',
+                'Integrated RESTful APIs with backend services using Node and Hapi.js',
+                'Optimized performance, resulting in 50% faster operations than the previous version',
+                'Enhanced system usability and improved client satisfaction'
             ],
             role: 'Frontend Developer',
             duration: 'Apr 2023 - Oct 2024',
             company: 'Unifo Pvt Ltd',
         },
         {
-            title: 'Micro Frontend Dashboards',
-            about: 'Interactive dashboards built using micro frontend architecture and Iframe integration.',
+            title: 'Micro Frontend Dashboard Integration',
+            about: 'Modular dashboards built using micro frontend architecture, enabling seamless integration with other systems via Iframe and secured with AWS Cognito.',
+            description: 'Implemented interactive dashboards with micro frontend architecture. Established iframe-based communication between modules. Made UI and backend changes to support cross-module integration.',
             logo: './src/assets/svg-images/frontend.svg',
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
@@ -91,17 +99,20 @@ export const ProfileData = {
                 { name: "AWS", logo: svgLogos.aws, styleKey: 'aws' },
             ],
             responsibilities: [
-                'Implemented micro frontend architecture',
-                'Created reusable dashboard components',
-                'Ensured secure authentication using AWS Cognito'
+                'Implemented micro frontend architecture using iframe-based module embedding',
+                'Designed reusable and responsive dashboard UI components using React',
+                'Integrated AWS Cognito for secure, authenticated access across modules',
+                'Developed backend adjustments to facilitate cross-module data flow',
+                'Enabled smooth interaction between connected modules through iframe messaging'
             ],
             role: 'UI Developer',
             duration: 'Apr 2023 - Oct 2024',
             company: 'Unifo Pvt Ltd',
         },
         {
-            title: 'Data Migration Services',
-            about: 'Automated migration tool for transferring data from DynamoDB to MongoDB with backend APIs.',
+            title: 'Data Migration Microservice',
+            about: 'Backend microservice to migrate data from DynamoDB to MongoDB with compatibility checks and performance optimization.',
+            description: 'Developed a backend service for cross-database migration. Used object-oriented design to maintain schema integrity. Enhanced data transfer performance and scalability.',
             logo: './src/assets/svg-images/data-migration.svg',
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
@@ -110,9 +121,9 @@ export const ProfileData = {
                 { name: "DynamoDB", logo: svgLogos.mongodb, styleKey: 'dynamoDb' },
             ],
             responsibilities: [
-                'Developed backend microservices for data migration',
-                'Ensured schema compatibility using OOP principles',
-                'Improved performance of data handling workflows'
+                'Developed backend microservice for data migration from DynamoDB to MongoDB',
+                'Applied OOP principles to ensure schema compatibility and maintainability',
+                'Enhanced performance for large-scale data transfers and workflows'
             ],
             role: 'Backend Developer',
             duration: 'Apr 2023 - Oct 2024',

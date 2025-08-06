@@ -1,4 +1,4 @@
-import { Grid, Box, Chip } from "@mui/material";
+import { Grid, Box, Chip, Divider } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import CustomTypography from "../inputs/CustomTypograpgy";
 import { cssStyles } from "../constants/CssStyles";
@@ -39,8 +39,16 @@ const useStyles = makeStyles(() => ({
     },
   },
   listContainer: {
+    width: '100%',
     textAlign: 'left',
     padding: '0 16px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    gap: '4px',
+    listStyleType: 'disc',
+    paddingLeft: '48px',
+    margin: 0
   }
 }));
 
@@ -58,8 +66,8 @@ const ProjectCard = ({ project }) => {
           />
         </div>
       )}
-      <CustomTypography text={project.title} styles={{ fontSize: '24px', fontWeight: 600 }} />
-      <CustomTypography text={project.about} styles={{ fontSize: '16px', fontWeight: 400, maxWidth: '80%' }} />
+      <CustomTypography text={project.title} styles={{ fontSize: '22px', fontWeight: 600 }} />
+      <CustomTypography text={project.about} styles={{ fontSize: '16px', fontWeight: 400, maxWidth: '90%' }} />
 
       {/* Technologies */}
       <Box className={classes.chipContainer}>
@@ -78,20 +86,21 @@ const ProjectCard = ({ project }) => {
       </Box>
 
       {/* Responsibilities */}
-      <Box className={classes.listContainer}>
+      <Box className={classes.listContainer} component="ul">
         {project.responsibilities?.map((item, index) => (
-          <CustomTypography
-            key={index}
-            text={`• ${item}`}
-            styles={{ fontSize: '14px', color: '#555' }}
-          />
+          <li key={index} style={{ fontSize: '14px', color: '#555', lineHeight: '1.6' }}>
+            {item}
+          </li>
         ))}
       </Box>
 
       {/* Role and Duration */}
-      <CustomTypography text={`Role: ${project.role}`} styles={{ fontSize: '14px', fontWeight: 500 }} />
-      <CustomTypography text={`Duration: ${project.duration}`} styles={{ fontSize: '14px', fontWeight: 500 }} />
-      <CustomTypography text={`Company: ${project.company}`} styles={{ fontSize: '14px', fontWeight: 500 }} />
+      {/* <CustomTypography text={`Role: ${project.role}`} styles={{ fontSize: '14px', fontWeight: 500 }} />
+      <CustomTypography text={`Duration: ${project.duration}`} styles={{ fontSize: '14px', fontWeight: 500 }} /> */}
+      <Grid sx={{ marginTop: 'auto', width: '100%' }}>
+        <Divider style={{ height: '1px', width: '100%', marginBottom: '4px' }} />
+        <CustomTypography text={`Company: ${project.company}`} styles={{ fontSize: '14px', fontWeight: 500, textAlign: 'center' }} />
+      </Grid>
     </Grid>
   );
 };
