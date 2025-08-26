@@ -1,7 +1,7 @@
 import svgLogos from '../assets/svg-images'
 
 export const ProfileData = {
-    About: `Software Developer with 2.5+ years of experience specializing in frontend and backend development. Proficient in JavaScript, React.js, Redux, Redux Toolkit, Node.js, Express, Hapi.js, MongoDB, and MySQL, with expertise in building scalable, high-performance applications.
+    About: `Software Developer with 3 years of experience specializing in frontend and backend development. Proficient in JavaScript, React.js, Redux, Redux Toolkit, Node.js, Express, Hapi.js, MongoDB, and MySQL, with expertise in building scalable, high-performance applications.
 
     Currently a Junior Software Developer at Mango Mass Media Pvt Ltd, leading frontend development and mentoring junior developers to ensure high-quality code and best practices.
 

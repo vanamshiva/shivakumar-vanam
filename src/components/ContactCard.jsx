@@ -5,6 +5,7 @@ import CustomTypography from "../inputs/CustomTypograpgy";
 import CustomTextField from "../inputs/CustomTextField";
 import CustomButton from "../inputs/CustomButton";
 import emailjs from "@emailjs/browser";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useStyles = makeStyles(() => ({
   outerWrapper: {
@@ -17,34 +18,54 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     maxWidth: '900px',
     width: '100%',
+    '@media (max-width:600px)': {
+      padding: "24px 8px",
+      borderRadius: "12px",
+      maxWidth: '100%',
+    }
   },
   subtext: {
     fontSize: "16px",
     textAlign: "center",
     color: "#666",
     marginBottom: "32px",
+    '@media (max-width:600px)': {
+      fontSize: "13px",
+      marginBottom: "16px",
+    }
   },
   fieldsContainer: {
     width: '100%',
     display: "flex",
     flexDirection: "column",
     gap: "20px",
+    '@media (max-width:600px)': {
+      gap: "12px",
+    }
   },
   row: {
     display: "flex",
     gap: "16px",
     flexDirection: "row",
     flexWrap: "wrap",
+    '@media (max-width:600px)': {
+      flexDirection: "column",
+      gap: "8px",
+    }
   },
   buttonWrapper: {
     marginTop: "24px",
     display: "flex",
     justifyContent: "center",
+    '@media (max-width:600px)': {
+      marginTop: "16px",
+    }
   },
 }));
 
 const ContactCard = () => {
   const classes = useStyles();
+  const isMobile = useMediaQuery('(max-width:600px)');
   const [form, setForm] = useState({ name: "", email: "", mobile: "", message: "" });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -119,12 +140,13 @@ const ContactCard = () => {
 
   return (
     <Grid className={classes.outerWrapper}>
-      <CustomTypography text="Contact with Me"
+      <CustomTypography
+        text="Contact with Me"
         styles={{
-          fontSize: "28px",
+          fontSize: isMobile ? "20px" : "28px",
           fontWeight: 700,
           textAlign: "center",
-          marginBottom: "20px",
+          marginBottom: isMobile ? "12px" : "20px",
         }}
       />
       {/* <CustomTypography text="Feel free to contact me for new projects or just for a chat." styles={classes.subtext} /> */}
@@ -138,8 +160,9 @@ const ContactCard = () => {
             onChange={handleChange}
             style={{ flex: 1 }}
             inputPropsStyle={{
-              borderRadius: "40px",
+              borderRadius: isMobile ? "20px" : "40px",
               backgroundColor: "#f9f9f9",
+              fontSize: isMobile ? "14px" : undefined,
             }}
             error={!!errors.name}
             helperText={errors.name}
@@ -151,8 +174,9 @@ const ContactCard = () => {
             onChange={handleChange}
             style={{ flex: 1 }}
             inputPropsStyle={{
-              borderRadius: "40px",
+              borderRadius: isMobile ? "20px" : "40px",
               backgroundColor: "#f9f9f9",
+              fontSize: isMobile ? "14px" : undefined,
             }}
             error={!!errors.mobile}
             helperText={errors.mobile}
@@ -168,8 +192,9 @@ const ContactCard = () => {
           error={!!errors.email}
           helperText={errors.email}
           inputPropsStyle={{
-            borderRadius: "40px",
+            borderRadius: isMobile ? "20px" : "40px",
             backgroundColor: "#f9f9f9",
+            fontSize: isMobile ? "14px" : undefined,
           }}
         />
         <CustomTextField
@@ -178,17 +203,26 @@ const ContactCard = () => {
           value={form.message}
           onChange={handleChange}
           multiline
-          rows={4}
+          rows={isMobile ? 3 : 4}
           error={!!errors.message}
           helperText={errors.message}
           inputPropsStyle={{
-            borderRadius: "20px",
+            borderRadius: isMobile ? "12px" : "20px",
             backgroundColor: "#f9f9f9",
+            fontSize: isMobile ? "14px" : undefined,
           }}
         />
 
         <Box className={classes.buttonWrapper}>
-          <CustomButton text="Submit" onClick={handleSubmit} isLoading={loading} styles={{ padding: '8px 60px' }} />
+          <CustomButton
+            text="Submit"
+            onClick={handleSubmit}
+            isLoading={loading}
+            styles={{
+              padding: isMobile ? '8px 32px' : '8px 60px',
+              fontSize: isMobile ? '15px' : undefined,
+            }}
+          />
         </Box>
       </Box>
     </Grid>
