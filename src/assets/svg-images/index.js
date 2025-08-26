@@ -7,6 +7,12 @@ import mysql from './mysql.svg'
 import nodejs from './nodejs.svg'
 import reactjs from './reactjs.svg'
 
+import damLogo from './dam.svg';
+import reportsLogo from './reports.svg';
+import sentinelLogo from './sentinel.svg';
+import frontendLogo from './frontend.svg';
+import dataMigrationLogo from './data-migration.svg';
+
 
 const svgLogos = {
     aws,
@@ -17,6 +23,12 @@ const svgLogos = {
     mysql,
     nodejs,
     reactjs,
+
+    damLogo,
+    reportsLogo,
+    sentinelLogo,
+    frontendLogo,
+    dataMigrationLogo
 }
 
 export default svgLogos

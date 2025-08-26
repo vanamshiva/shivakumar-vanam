@@ -1,4 +1,4 @@
-import svgLogos from '../assets/svg-images'
+import svgLogos from '../assets/svg-images';
 
 export const ProfileData = {
     About: `Software Developer with 3 years of experience specializing in frontend and backend development. Proficient in JavaScript, React.js, Redux, Redux Toolkit, Node.js, Express, Hapi.js, MongoDB, and MySQL, with expertise in building scalable, high-performance applications.
@@ -31,7 +31,7 @@ export const ProfileData = {
             title: 'Digital Asset Management System (DAM)',
             about: 'Robust system to streamline digital asset storage, organization, retrieval, and accessibility with seamless UI and backend integration.',
             description: 'Built an enterprise-grade system to manage digital assets effectively. Integrated scalable backend architecture with intuitive UI. Enabled advanced search and filters for faster retrieval.',
-            logo: './src/assets/svg-images/dam.svg',
+            logo: svgLogos.damLogo,
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
                 { name: "Node", logo: svgLogos.nodejs, styleKey: 'nodeJs' },
@@ -51,7 +51,7 @@ export const ProfileData = {
             title: 'Reports & Data Export Module',
             about: 'An end-to-end reporting module that supports XLSX/CSV export, custom UI, and backend data computation over multiple collections for analytics.',
             description: 'Designed intuitive report UI and backend computation logic. Automated XLSX/CSV export based on dynamic filters. Improved reporting efficiency and cross-team analytics.',
-            logo: './src/assets/svg-images/reports.svg',
+            logo: svgLogos.reportsLogo,
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
                 { name: "Node", logo: svgLogos.nodejs, styleKey: 'nodeJs' },
@@ -71,7 +71,7 @@ export const ProfileData = {
             title: 'Sentinel – Customs Management System',
             about: 'A newly built logistics management system for handling customs clearance with improved UI/UX and 50% faster performance compared to the earlier version.',
             description: 'Rebuilt the entire application from scratch with a modern UI. Integrated real-time APIs and optimized workflows. Achieved 50% faster performance over the previous version.',
-            logo: './src/assets/svg-images/sentinel.svg',
+            logo: svgLogos.sentinelLogo,
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
                 { name: "Node", logo: svgLogos.nodejs, styleKey: 'nodeJs' },
@@ -92,7 +92,7 @@ export const ProfileData = {
             title: 'Micro Frontend Dashboard Integration',
             about: 'Modular dashboards built using micro frontend architecture, enabling seamless integration with other systems via Iframe and secured with AWS Cognito.',
             description: 'Implemented interactive dashboards with micro frontend architecture. Established iframe-based communication between modules. Made UI and backend changes to support cross-module integration.',
-            logo: './src/assets/svg-images/frontend.svg',
+            logo: svgLogos.frontendLogo,
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
                 { name: "Iframe", logo: svgLogos.nodejs, styleKey: 'nodeJs' },
@@ -113,7 +113,7 @@ export const ProfileData = {
             title: 'Data Migration Microservice',
             about: 'Backend microservice to migrate data from DynamoDB to MongoDB with compatibility checks and performance optimization.',
             description: 'Developed a backend service for cross-database migration. Used object-oriented design to maintain schema integrity. Enhanced data transfer performance and scalability.',
-            logo: './src/assets/svg-images/data-migration.svg',
+            logo: svgLogos.dataMigrationLogo,
             technologies: [
                 { name: "React", logo: svgLogos.reactjs, styleKey: 'reactJs' },
                 { name: "Node", logo: svgLogos.nodejs, styleKey: 'nodeJs' },
