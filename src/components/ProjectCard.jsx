@@ -2,6 +2,7 @@ import { Grid, Box, Chip, Divider } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import CustomTypography from "../inputs/CustomTypograpgy";
 import { cssStyles } from "../constants/CssStyles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useStyles = makeStyles(() => ({
   projectsCard: {
@@ -14,13 +15,21 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
     padding: '16px',
     flexGrow: 1,
-    background: 'linear-gradient(to bottom, #c7d2fe, #a5f3fc, #fdf4ff)'
+    background: 'linear-gradient(to bottom, #c7d2fe, #a5f3fc, #fdf4ff)',
+    '@media (max-width:600px)': {
+      padding: '8px',
+      gap: '4px',
+      borderRadius: '10px',
+    }
   },
   chipContainer: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '4px',
+    '@media (max-width:600px)': {
+      gap: '2px',
+    }
   },
   chip: {
     fontSize: '14px !important',
@@ -35,6 +44,10 @@ const useStyles = makeStyles(() => ({
     '&.MuiChip-outlined': {
       border: '#2196f3 !important',
     },
+    '@media (max-width:600px)': {
+      fontSize: '12px !important',
+      padding: '4px 8px !important',
+    }
   },
   listContainer: {
     width: '100%',
@@ -46,12 +59,19 @@ const useStyles = makeStyles(() => ({
     gap: '4px',
     listStyleType: 'disc',
     paddingLeft: '48px',
-    margin: 0
+    margin: 0,
+    '@media (max-width:600px)': {
+      padding: '0 4px',
+      paddingLeft: '20px',
+      fontSize: '12px',
+      gap: '2px',
+    }
   }
 }));
 
 const ProjectCard = ({ project }) => {
   const classes = useStyles();
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
     <Grid className={classes.projectsCard}>
@@ -60,12 +80,31 @@ const ProjectCard = ({ project }) => {
           <img
             src={project.logo}
             alt={project.title}
-            style={{ width: 200, height: 200, objectFit: 'contain' }}
+            style={{
+              width: isMobile ? 100 : 200,
+              height: isMobile ? 100 : 200,
+              objectFit: 'contain'
+            }}
           />
         </div>
       )}
-      <CustomTypography text={project.title} styles={{ fontSize: '22px', fontWeight: 600 }} />
-      <CustomTypography text={project.about} styles={{ fontSize: '16px', fontWeight: 400, maxWidth: '90%' }} />
+      <CustomTypography
+        text={project.title}
+        styles={{
+          fontSize: isMobile ? '16px' : '22px',
+          fontWeight: 600,
+          textAlign: 'center'
+        }}
+      />
+      <CustomTypography
+        text={project.about}
+        styles={{
+          fontSize: isMobile ? '13px' : '16px',
+          fontWeight: 400,
+          maxWidth: '95%',
+          textAlign: 'center'
+        }}
+      />
 
       {/* Technologies */}
       <Box className={classes.chipContainer}>
@@ -86,7 +125,14 @@ const ProjectCard = ({ project }) => {
       {/* Responsibilities */}
       <Box className={classes.listContainer} component="ul">
         {project.responsibilities?.map((item, index) => (
-          <li key={index} style={{ fontSize: '14px', color: '#555', lineHeight: '1.6' }}>
+          <li
+            key={index}
+            style={{
+              fontSize: isMobile ? '12px' : '14px',
+              color: '#555',
+              lineHeight: isMobile ? '1.4' : '1.6'
+            }}
+          >
             {item}
           </li>
         ))}
@@ -96,8 +142,15 @@ const ProjectCard = ({ project }) => {
       {/* <CustomTypography text={`Role: ${project.role}`} styles={{ fontSize: '14px', fontWeight: 500 }} />
       <CustomTypography text={`Duration: ${project.duration}`} styles={{ fontSize: '14px', fontWeight: 500 }} /> */}
       <Grid sx={{ marginTop: 'auto', width: '100%' }}>
-        <Divider style={{ height: '1px', width: '100%', marginBottom: '4px' }} />
-        <CustomTypography text={`Company: ${project.company}`} styles={{ fontSize: '14px', fontWeight: 500, textAlign: 'center' }} />
+        <Divider style={{ height: '1px', width: '100%', marginBottom: isMobile ? '2px' : '4px' }} />
+        <CustomTypography
+          text={`Company: ${project.company}`}
+          styles={{
+            fontSize: isMobile ? '12px' : '14px',
+            fontWeight: 500,
+            textAlign: 'center'
+          }}
+        />
       </Grid>
     </Grid>
   );
