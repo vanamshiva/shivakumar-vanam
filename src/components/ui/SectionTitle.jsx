@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 
-const SectionTitle = ({ children }) => (
-  <Box sx={{ mb: { xs: 4.5, md: 6 } }}>
+const SectionTitle = ({ children, centered }) => (
+  <Box sx={{ mb: { xs: 4.5, md: 6 }, ...(centered && { textAlign: 'center' }) }}>
     <Typography
       sx={{
         fontSize: { xs: '28px', md: '44px' },
@@ -20,6 +20,7 @@ const SectionTitle = ({ children }) => (
         width: 56,
         borderRadius: 2,
         background: 'linear-gradient(90deg, #6366F1, #8B5CF6)',
+        ...(centered && { mx: 'auto' }),
       }}
     />
   </Box>

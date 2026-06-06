@@ -2,7 +2,6 @@ import { Box, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import PhoneIcon from '@mui/icons-material/Phone';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { fadeUp, bounce } from '../../utils/animations';
 import { scrollTo } from '../../utils/scroll';
@@ -10,8 +9,7 @@ import { scrollTo } from '../../utils/scroll';
 const SOCIALS = [
   { icon: <GitHubIcon sx={{ fontSize: '20px' }} />,  href: 'https://github.com/shivakumar-vanam',           title: 'GitHub' },
   { icon: <LinkedInIcon sx={{ fontSize: '20px' }} />, href: 'https://www.linkedin.com/in/shiva-kumar-vanam', title: 'LinkedIn' },
-  { icon: <EmailIcon sx={{ fontSize: '20px' }} />,    href: 'mailto:vanamshiva3636@gmail.com',            title: 'Email' },
-  { icon: <PhoneIcon sx={{ fontSize: '20px' }} />,    href: 'tel:+91REDACTED',                            title: 'Phone' },
+  { icon: <EmailIcon sx={{ fontSize: '20px' }} />,    href: 'mailto:vanamshiva3636@gmail.com',              title: 'Email' },
 ];
 
 const STATS = [

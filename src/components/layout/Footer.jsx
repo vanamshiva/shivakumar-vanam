@@ -96,7 +96,7 @@ const Footer = () => (
 
       <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.06)', pt: 3.5, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1 }}>
         <Typography sx={{ color: '#334155', fontSize: '13px' }}>
-          © 2025 Shiva Kumar Vanam. All rights reserved.
+          © {new Date().getFullYear()} Shiva Kumar Vanam. All rights reserved.
         </Typography>
         <Typography sx={{ color: '#1E293B', fontSize: '13px' }}>
           Built with React &amp; Material UI

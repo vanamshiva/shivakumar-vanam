@@ -2,18 +2,11 @@ import { Box, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import PhoneIcon from '@mui/icons-material/Phone';
 import SectionTitle from '../ui/SectionTitle';
 import SectionWrapper from '../ui/SectionWrapper';
 import ContactCard from '../ui/ContactCard';
 
 const CONTACT_LINKS = [
-  {
-    icon: <PhoneIcon sx={{ fontSize: '18px' }} />,
-    meta: 'Phone',
-    label: '+91 REDACTED',
-    href: 'tel:+91REDACTED',
-  },
   {
     icon: <EmailIcon sx={{ fontSize: '18px' }} />,
     meta: 'Email',
@@ -37,7 +30,7 @@ const CONTACT_LINKS = [
 const ContactSection = () => (
   <SectionWrapper id="contact" bg="#F8FAFC">
     <Box sx={{ mb: { xs: 5, md: 7 }, textAlign: 'center' }}>
-      <SectionTitle>Get In Touch</SectionTitle>
+      <SectionTitle centered>Get In Touch</SectionTitle>
       <Typography sx={{ fontSize: { xs: '15px', md: '17px' }, color: '#475569', maxWidth: '520px', mx: 'auto', mt: -3 }}>
         Have a project in mind or want to collaborate? I&apos;d love to hear from you.
       </Typography>
