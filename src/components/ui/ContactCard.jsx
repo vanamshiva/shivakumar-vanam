@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Grid, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import CustomTypography from "../inputs/CustomTypograpgy";
-import CustomTextField from "../inputs/CustomTextField";
-import CustomButton from "../inputs/CustomButton";
+import CustomTypography from "../../inputs/CustomTypograpgy";
+import CustomTextField from "../../inputs/CustomTextField";
+import CustomButton from "../../inputs/CustomButton";
 import emailjs from "@emailjs/browser";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useStyles = makeStyles(() => ({
   outerWrapper: {
-    background: "linear-gradient(135deg, #c7d2fe, #e0f2fe, #fdf4ff)",
+    background: "#fff",
+    border: "1px solid #E8ECF4",
+    boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
     padding: "60px 40px",
     borderRadius: "24px",
     display: "flex",
