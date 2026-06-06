@@ -201,7 +201,7 @@ const ContactCard = () => {
         />
         <CustomTextField
           name="message"
-          label="Work Description..."
+          label="Description..."
           value={form.message}
           onChange={handleChange}
           multiline
