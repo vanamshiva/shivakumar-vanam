@@ -4,7 +4,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SectionTitle from '../ui/SectionTitle';
 import SectionWrapper from '../ui/SectionWrapper';
-import ContactCard from '../ui/ContactCard';
 
 const CONTACT_LINKS = [
   {
@@ -36,20 +35,14 @@ const ContactSection = () => (
       </Typography>
     </Box>
 
-    <Box sx={{
-      display: 'grid',
-      gridTemplateColumns: { xs: '1fr', lg: '5fr 8fr' },
-      gap: { xs: 3, md: 3.5 },
-      alignItems: 'start',
-    }}>
-      {/* Left: dark info panel */}
+    <Box>
+      {/* Full-width dark info panel */}
       <Box sx={{
         background: '#0F172A',
         borderRadius: '24px',
         p: { xs: 3, md: 4 },
         color: '#fff',
-        position: { lg: 'sticky' },
-        top: { lg: '88px' },
+        width: '100%',
       }}>
         {/* Decorative gradient blob */}
         <Box sx={{
@@ -65,7 +58,7 @@ const ContactSection = () => (
             pointerEvents: 'none',
           }} />
           <Typography sx={{ fontWeight: 800, fontSize: { xs: '22px', md: '26px' }, color: '#F8FAFC', lineHeight: 1.2 }}>
-            Let&apos;s Work<br />Together
+            Let&apos;s Work Together
           </Typography>
           <Typography sx={{ fontSize: '14px', color: '#64748B', mt: 1.25, lineHeight: 1.7 }}>
             Open to full-time roles, freelance projects, and interesting collaborations.
@@ -126,11 +119,6 @@ const ContactSection = () => (
             Open to Opportunities · Available Now
           </Typography>
         </Box>
-      </Box>
-
-      {/* Right: contact form */}
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <ContactCard />
       </Box>
     </Box>
   </SectionWrapper>
